@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Destinations | Explore Salone</title>
+  <meta name="description" content="Search and explore beaches, islands, wildlife, history, culture and mountains in Sierra Leone.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="logo" href="index.html" aria-label="Explore Salone home"><span class="logo-mark"><i class="fa-solid fa-mountain-sun"></i></span>Explore Salone</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu"><i class="fa-solid fa-bars"></i></button>
+      <div class="nav-links" id="primary-navigation"><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="destinations.html">Destinations</a><a class="nav-link" href="activities.html">Activities</a><a class="nav-link" href="about.html">About</a><a class="nav-link" href="contact.html">Contact</a></div>
+      <a class="btn btn-primary nav-cta" href="contact.html">Plan Your Trip</a>
+    </nav>
+  </header>
+  <main>
+    <section class="page-header"><div class="container"><p class="eyebrow" style="color:#8dd4b4">Find your next adventure</p><h1>Destinations</h1><p>Explore the best places to visit in Sierra Leone.</p></div></section>
+    <div class="container">
+      <form class="search-panel" id="destination-search-form" role="search">
+        <div class="field"><label class="sr-only" for="destination-search">Search destinations</label><input id="destination-search" type="search" placeholder="Search destinations..."></div>
+        <div class="field"><label class="sr-only" for="category-select">Filter by category</label><select id="category-select"><option value="all">All Categories</option><option value="beaches">Beaches</option><option value="islands">Islands</option><option value="wildlife">Wildlife</option><option value="history">History</option><option value="culture">Culture</option><option value="mountains">Mountains</option></select></div>
+        <button class="btn btn-primary" type="submit"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+      </form>
+    </div>
+    <section class="section">
+      <div class="container destination-layout">
+        <aside class="filter-sidebar" aria-label="Destination categories">
+          <h2>Browse by Category</h2>
+          <div class="category-list">
+            <button class="category-filter active" type="button" data-category="all">All Destinations</button><button class="category-filter" type="button" data-category="beaches">Beaches</button><button class="category-filter" type="button" data-category="islands">Islands</button><button class="category-filter" type="button" data-category="wildlife">Wildlife</button><button class="category-filter" type="button" data-category="history">History</button><button class="category-filter" type="button" data-category="culture">Culture</button><button class="category-filter" type="button" data-category="mountains">Mountains</button>
+          </div>
+        </aside>
+        <div>
+          <h2 class="section-title">Featured Destinations</h2>
+          <div class="destination-results-grid" id="destination-results">
+            <article class="destination-card reveal" id="tokeh" data-name="Tokeh Beach" data-location="Freetown Peninsula" data-category="Beach Beaches"><div class="destination-card-image"><img src="images/Toh.jpeg" alt="Activity image" alt="Tokeh Beach with white sand and palms"></div><div class="card-body"><span class="category-pill">Beach</span><h3>Tokeh Beach</h3><p class="card-location">Freetown Peninsula</p><a class="text-link" href="contact.html">Plan a visit</a></div></article>
+            <article class="destination-card reveal" id="bureh" data-name="Bureh Beach" data-location="Western Area" data-category="Beach Beaches"><div class="destination-card-image"><img src="images/aa.jpeg" alt="Activity image" alt="Bureh Beach surf and golden shoreline"></div><div class="card-body"><span class="category-pill">Beach · Surfing</span><h3>Bureh Beach</h3><p class="card-location">Western Area</p><a class="text-link" href="contact.html">Plan a visit</a></div></article>
+            <article class="destination-card reveal" id="river-two" data-name="River No. 2 Beach" data-location="Western Area" data-category="Beach Beaches Culture"><div class="destination-card-image"><img src="images/n.jpeg" alt="Activity image" alt="River Number Two Beach and its lush coastal backdrop"></div><div class="card-body"><span class="category-pill">Beach</span><h3>River No. 2 Beach</h3><p class="card-location">Western Area</p><a class="text-link" href="contact.html">Plan a visit</a></div></article>
+            <article class="destination-card reveal" id="bunce" data-name="Bunce Island" data-location="Near Freetown" data-category="History Historic"><div class="destination-card-image"><img src="images/r.jpeg" alt="Activity image" alt="Tropical island landscape at Bunce Island"></div><div class="card-body"><span class="category-pill">History · Historic site</span><h3>Bunce Island</h3><p class="card-location">Near Freetown</p><a class="text-link" href="contact.html">Plan a visit</a></div></article>
+            <article class="destination-card reveal" data-name="Tiwai Island" data-location="Southern Sierra Leone" data-category="Wildlife Islands Nature"><div class="destination-card-image"><img src="images/t.jpeg" alt="Activity image" alt="Green forest habitat on Tiwai Island"></div><div class="card-body"><span class="category-pill">Wildlife · Nature</span><h3>Tiwai Island</h3><p class="card-location">Southern Sierra Leone</p><a class="text-link" href="contact.html">Plan a visit</a></div></article>
+            <article class="destination-card reveal" data-name="Loma Mountains" data-location="Northern Sierra Leone" data-category="Mountains Hiking"><div class="destination-card-image"><img src="images/M.jpeg" alt="Activity image" alt="Mountain ridge"></div><div class="card-body"><span class="category-pill">Mountains · Hiking</span><h3>Loma Mountains</h3><p class="card-location">Northern Sierra Leone</p><a class="text-link" href="contact.html">Plan a visit</a></div></article>
+            <div class="empty-state hidden" id="empty-state">No destinations found. Try another search.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-column"><a class="logo" href="index.html" style="color:white"><span class="logo-mark"><i class="fa-solid fa-mountain-sun"></i></span>Explore Salone</a><p>Discover the beauty, culture and adventure of Sierra Leone.</p></div>
+      <div class="footer-column"><h3>Quick Links</h3><div class="footer-links"><a href="index.html">Home</a><a href="destinations.html">Destinations</a><a href="activities.html">Activities</a><a href="about.html">About</a><a href="contact.html">Contact</a></div></div>
+      <div class="footer-column"><h3>Contact Us</h3><div class="footer-links"><span><i class="fa-solid fa-phone"></i> +232 30 657411</span><a href="mailto:info@exploresalone.com"><i class="fa-solid fa-envelope"></i> info@exploresalone.com</a><span><i class="fa-solid fa-location-dot"></i> Freetown, Sierra Leone</span></div></div>
+      <div class="footer-column"><h3>Follow Us</h3><div class="social-links"><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a><a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a></div></div>
+    </div><p class="copyright container">© 2026 Explore Salone. All rights reserved.</p>
+  </footer>
+</body>
+</html>
